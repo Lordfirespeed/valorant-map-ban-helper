@@ -1,3 +1,11 @@
-{
-
-}
+[
+  {"name": "Haven", "in_rotation": true},
+  {"name": "Pearl", "in_rotation": true},
+  {"name": "Fracture", "in_rotation": true},
+  {"name": "Breeze", "in_rotation": false},
+  {"name": "Icebox", "in_rotation": true},
+  {"name": "Bind", "in_rotation": false},
+  {"name": "Haven", "in_rotation": true},
+  {"name": "Split", "in_rotation": true},
+  {"name": "Ascent", "in_rotation": true}
+]
