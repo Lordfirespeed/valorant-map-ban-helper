@@ -1,15 +1,31 @@
 :root {
-    --map-checkbox-color: red;
+    --banned-map-checkbox-color: red;
+    --selected-map-checkbox-color: green;
+}
+input[type=checkbox]:indeterminate {
+    background-color: var(--selected-map-checkbox-color) !important;
+    border-color: var(--selected-map-checkbox-color) !important;
+    opacity: 1 !important;
+    --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
+}
+
+input[type=checkbox]:indeterminate + label {
+    color: var(--selected-map-checkbox-color);
+    opacity: 1 !important;
+}
+
+input[type=checkbox]:indeterminate + label::after {
+
 }
 
 input[type=checkbox]:checked {
-    background-color: var(--map-checkbox-color);
-    border-color: var(--map-checkbox-color);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    background-color: var(--banned-map-checkbox-color);
+    border-color: var(--banned-map-checkbox-color);
+    --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e") !important;
 }
 
 input[type=checkbox]:checked + label {
     text-decoration: line-through;
     text-decoration-thickness: 0.1em;
-    color: var(--map-checkbox-color);;
+    color: var(--banned-map-checkbox-color);;
 }
